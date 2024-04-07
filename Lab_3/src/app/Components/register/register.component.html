@@ -1,0 +1,20 @@
+
+
+<div>
+    <h1>Register</h1>
+    <input type="text" name="UserName" [(ngModel)]="userName" [value]="userName" placeholder="Enter UserName">
+    @if (userName.length < 3 && userName) 
+    {
+        <span class="not-valid">User Name must be at least 3 letters</span>
+    } @else if(userName){
+        <span class="valid">Valid User Name</span>
+    }
+    <input type="number" name="age" [(ngModel)]="userAge" [value]="userAge" placeholder="Enter Your Age">
+    @if ((+userAge < 10 || +userAge > 30) && userAge) 
+    {
+        <span class="not-valid">Age must be between 10 and 30 years</span>
+    } @else if(userAge){
+        <span class="valid">Valid Age</span>
+    }
+    <input type="button" value="Register" (click)="saveData()">
+</div>
