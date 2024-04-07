@@ -13,12 +13,12 @@ This Angular application allows users to register their name and age through the
 
 *Figure 1: Screenshot of the main page displaying the vaild regesteration with user's data.*
 
-![Details Page](./assets/images/valid.png)
+![Details Page](./src/assets/images/valid.png)
 
 
 *Figure 1: Screenshot of the main page displaying the Invaild regesteration with user's data.*
 
-![Details Page](./assets/images/not-valid.png)
+![Details Page](./src/assets/images/not-valid.png)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
