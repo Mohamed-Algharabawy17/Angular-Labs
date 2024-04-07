@@ -1,5 +1,26 @@
 # Lab3
 
+# User Registration and Display Application
+
+This Angular application allows users to register their name and age through the `RegisterComponent` and displays the registered users' data using the `UsersComponent`.
+
+## Usage
+
+1. Include the `RegisterComponent` and `UsersComponent` in the desired template (`app.component.html` in this case).
+2. Use the `(dataEvent)` output event of `RegisterComponent` to capture user data in the parent component (`AppComponent`).
+3. Pass the collected user data to the `UsersComponent` to display all registered users.
+
+
+*Figure 1: Screenshot of the main page displaying the vaild regesteration with user's data.*
+
+![Details Page](assets/images/valid.png)
+
+
+*Figure 1: Screenshot of the main page displaying the Invaild regesteration with user's data.*
+
+![Details Page](assets/images/not-valid.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
 ## Development server
