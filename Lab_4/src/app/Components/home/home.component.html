@@ -1,0 +1,62 @@
+<div class="myForm">
+    <div class="main-form-div d-flex flex-column align-items-center">
+        <h2 class="mt-3">Register</h2>
+    <form [formGroup]="validation" class="row g-3 p-3 needs-validation m-auto" novalidate>
+        <div class="col-md-10 mb-3 d-flex flex-column align-items-center m-auto">
+            <div class="d-flex align-items-center">
+                <label for="validationCustom03" class="form-label w-25 text-center">Name</label>
+                <input formControlName="name" type="text" class="form-control mx-3" id="validationCustom03">
+            </div>
+            @if (!validName && validation.controls["name"].value) 
+            {
+                <div class="text-danger text-end w-75">
+                  Please provide a valid Name.
+                </div>
+            } @else if(validName){
+                <div class="text-success">
+                    Good name format
+                </div>
+            }
+        </div>
+    
+        <div class="col-md-10 mb-3 d-flex flex-column text-center align-items-center m-auto">
+            <div class="d-flex align-items-center">
+                <label for="validationCustom03" class="form-label w-25 text-center">Age</label>
+                <input formControlName="age" type="number" class="form-control mx-3" id="validationCustom03">
+            </div>
+            @if (!validAge && validation.controls["age"].value) 
+            {
+                <span class="text-danger w-75">
+                  Please provide a valid Age
+                </span>
+            } @else if(validAge){
+                <div class="text-success">
+                    Good age format.
+                </div>
+            }
+        </div>
+    
+        <div class="col-md-10 mb-3 d-flex flex-column text-center align-items-center m-auto">
+            <div class="d-flex align-items-center">
+                <label for="validationCustom03" class="form-label w-25 text-center">Email</label>
+                <input formControlName="email" type="text" class="form-control mx-3" id="validationCustom03">
+            </div>
+                @if (!validEmail && validation.controls["email"].value) 
+            {
+                <div class="text-danger text-end w-75">
+                  Please provide a valid Email
+                </div>
+            } @else if(validEmail){
+                <div class="text-success">
+                    Good email format
+                </div>
+            }
+    
+        </div>
+    
+        <div class="col-12 text-center">
+          <button (click)="studentData()" class="btn btn-outline-success" type="submit">CHECK</button>
+        </div>
+      </form>
+    </div>
+</div>

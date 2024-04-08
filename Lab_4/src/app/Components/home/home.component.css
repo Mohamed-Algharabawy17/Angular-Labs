@@ -1,0 +1,22 @@
+.needs-validation{
+    border-radius: 10px;
+    width: 78%;
+}
+
+
+.myForm {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.main-form-div{
+    height: 50vh;
+    width: 60vh;
+    background-color: beige;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(207, 207, 207);
+}
