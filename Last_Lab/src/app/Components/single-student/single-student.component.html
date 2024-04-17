@@ -1,0 +1,25 @@
+<div class="card mb-4 w-100">
+    <div class="card-body">
+        <h4 class="card-title">Student</h4>
+        <div class="d-flex">
+            <p class="m-0 card-description">
+                Details of 
+            </p>
+            <p class="m-0 mx-2 mb-2 text-dark"><i><b>{{ std.name }}</b></i></p>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th scope="row">User Name</th>
+                        <td>{{ std.username }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Email</th>
+                        <td><a type="button" routerLink="/students/{{std.id}}" class="text-decoration-underline text-secondary"><i>{{ std.email }}</i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

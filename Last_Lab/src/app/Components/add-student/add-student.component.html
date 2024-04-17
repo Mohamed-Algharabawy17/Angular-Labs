@@ -1,0 +1,96 @@
+<div class="myForm">
+    <div class="main-form-div d-flex flex-column align-items-center">
+        <h2 class="mt-5">Add New Student</h2>
+    <form [formGroup]="validation" class="row g-3 p-3 needs-validation m-auto mt-5" novalidate>
+        <div class="col-md-10 mb-3 d-flex flex-column align-items-center m-auto">
+            <div class="d-flex align-items-center">
+                <label for="name" class="form-label w-50 text-center">Full Name</label>
+                <input formControlName="name" type="text" class="form-control mx-3" id="name" #name>
+            </div>
+            @if (!validName && validation.controls["name"].value) 
+            {
+                <div class="text-danger text-end errTxt w-75">
+                  Please provide a valid Name.
+                </div>
+            } @else if(validName){
+                <div class="text-success sucessTxt">
+                    Good name format
+                </div>
+            }
+        </div>
+
+        <div class="col-md-10 mb-3 d-flex flex-column align-items-center m-auto">
+            <div class="d-flex align-items-center">
+                <label for="name" class="form-label w-50 text-center">User Name</label>
+                <input formControlName="username" type="text" class="form-control mx-3" id="name" #username>
+            </div>
+            @if (!validUserName && validation.controls["username"].value) 
+            {
+                <div class="text-danger errTxt text-end w-100">
+                  Please provide a valid UserName.
+                </div>
+            } @else if(validUserName){
+                <div class="text-success sucessTxt">
+                    Good user name format
+                </div>
+            }
+        </div>
+    
+        <div class="col-md-10 mb-3 d-flex flex-column text-center align-items-center m-auto">
+            <div class="d-flex align-items-center">
+                <label for="age" class="form-label w-50 text-center">Age</label>
+                <input formControlName="age" type="number" class="form-control mx-3" id="age" #age>
+            </div>
+            @if (!validAge && validation.controls["age"].value) 
+            {
+                <span class="text-danger errTxt w-75">
+                  Please provide a valid Age
+                </span>
+            } @else if(validAge){
+                <div class="text-success sucessTxt">
+                    Good age format.
+                </div>
+            }
+        </div>
+    
+        <div class="col-md-10 mb-3 d-flex flex-column text-center align-items-center m-auto">
+            <div class="d-flex align-items-center">
+                <label for="mail" class="form-label w-50 text-center">Email</label>
+                <input formControlName="email" type="text" class="form-control mx-3" id="mail" #mail>
+            </div>
+                @if (!validEmail && validation.controls["email"].value) 
+            {
+                <div class="text-danger errTxt text-end w-75">
+                  Please provide a valid Email
+                </div>
+            } @else if(validEmail){
+                <div class="text-success sucessTxt">
+                    Good email format
+                </div>
+            }
+    
+        </div>
+
+        <div class="col-md-10 mb-3 d-flex flex-column text-center align-items-center m-auto">
+            <div class="d-flex align-items-center">
+                <label for="phone" class="form-label w-50 text-center">Phone</label>
+                <input formControlName="phone" type="text" class="form-control mx-3" id="phone" #phone>
+            </div>
+                @if (!validPhone && validation.controls["phone"].value) 
+            {
+                <div class="text-danger errTxt text-end w-75">
+                  Please provide a valid Email
+                </div>
+            } @else if(validPhone){
+                <div class="text-success sucessTxt">
+                    Good phone format
+                </div>
+            }
+        </div>
+    
+        <div class="col-12 text-center">
+          <button (click)="sendStudentData(name.value,username.value, age.value, mail.value, phone.value)" class="btn btn-outline-success" type="submit">ADD</button>
+        </div>
+      </form>
+    </div>
+</div>

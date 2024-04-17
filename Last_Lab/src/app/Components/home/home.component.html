@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="myForm row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                @for (std of stdData; track stdData) 
+                {
+                    <div class="col">
+                        <app-single-student [std]="std"></app-single-student>
+                    </div>
+                }                          
+            </div>
+            <a mat-fab routerLink="/addStudent" class="mx-3 btn bg-success position-fixed bottom-0 end-0 m-4 btn-outline-success">
+                <mat-icon>add</mat-icon>
+            </a>
+        </div>
+    </div>
+</div>
